@@ -1,0 +1,227 @@
+/* Created for .epub-conversion within Scrivener 3.0 by Alexandria Douillette, June 2022 when working on The last five years of David S. Levi */
+
+/* Default page formatting */
+
+body {
+  font-family: serif;
+  font-family: "Palatino Linotype";
+  font-variant: oldstyle-nums;
+  text-indent: 0;
+  text-align: justify;
+  }
+
+/*Options to fill differently*/
+  
+/*Different pagestyles*/
+
+.titlepage, .dedication, .bookheader, .partheader, .sourceindex {
+  margin: 12.5% 0 0 auto;
+  }
+  
+.chapterheader {
+  font-variant: small-caps;
+  margin-top: 2.8rem;
+  margin-bottom: 1.4rem;
+  }
+  
+.fillfromcenter, .quotepage {
+  margin: 50% 0 50% 0;
+  }
+  
+.fillfrombottom, .imprintpage, .sourceindex {
+  margin: 100% 0 0 0;
+  }
+
+.titlepage, .dedication, .bookheader, .partheader, .imprintpage, .chapterheader, .subtitle, .quote, blockquote {
+  text-align: center;
+  }
+    
+.quotesource {
+  text-align: right;
+  }
+
+.imprintpage, .sourceindex, .subtitle, .quoteSource {
+  font-size: 0.8rem;
+  line-height: 1.75;
+  line-height: calc(1.4/0.8);
+  }
+
+.subtitle {
+  font-variant: small-caps;
+  }
+
+/*Div-Types*/
+
+.scene, .partialscene {
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: justify;
+  }
+
+div.scene + div.scene, div.partialscene + div.scene, .quoteSource  {
+  margin: 1.4rem 0 0 0;
+  }
+  
+div.scene>p+p, div.partialscene>p+p, div.partialScene>p:first-child {
+  text-indent: 1rem;
+  }
+  
+/*Before Quotepages there's a pagebreak except after Title*/
+
+div.quotepage {
+  page-break-before: always;
+  break-before: always;
+  }
+
+div.partheader + div.quotepage {
+  page-break-before: avoid;
+  break-before: avoid;
+  }
+ 
+/*Paragraph Styles*/
+
+/*h1 = Buch, h2 = Part, h3 = Kapitel*/
+
+h1, h2, h3, h4, h5, h6, h7, h8, h9 {
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  }
+
+p {
+  margin: 0;
+  }
+
+/* Styles */
+
+.title, .halftitle {
+  font-family: non-serif;
+  font-family: "Franklin Gothic";
+  font-stretch: semi-condensed;
+  font-variant: oldstyle-nums;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  margin: 1.4rem 0 1.4rem 0rem; 
+  }
+  
+.title {
+  line-height: 1.2727272727;
+  line-height: calc(2.8/2.2); /*(2.8 / 2.2)*/
+  font-size: 2.2rem;
+  }
+  
+.halftitle {
+  line-height: 1.1666666667;
+  line-height: calc(1.4/1.2); /* 1.4 / 1.2 */
+  font-size: 1.2rem;
+  }
+  
+.chaptertitle {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  }
+
+/*Quote Formatting and treatment within text*/
+  
+blockquote, blockquote p, p.quote, p.author, .quotepage p {
+  text-indent: 0;
+  margin: 1.4rem;
+  }
+  
+/* Stylings */
+
+.smallcaps {
+  font-variant: small-caps;
+  }
+
+/*em and strong as classes as well as italic and bold are simply because Scrivener won't let me export it otherwise, will be cleaned up:
+
+<span class="em">([^>]*)</span>
+<em>\1</em>
+
+<span class="italic">([^>]*)</span>
+<i>\1</i>
+
+<span class="strong">([^>]*)</span>
+<strong>\1</strong>
+
+<span class="bold">([^>]*)</span>
+<b>\1</b> 
+
+*/
+
+em, i, .italic, .em {
+  font-style: italic;
+  }
+
+strong, b, .bold, .strong {
+  font-weight: bold;
+  }
+
+.center {
+  text-align: center;
+  }
+
+.right {
+  text-align: right;
+  }
+
+.left {
+  text-align: left;
+  }
+
+.block {
+  text-align: justify;
+  }
+
+.rainbow {
+  background: repeating-linear-gradient(90deg, #D75B8D, #CF2D28, #DE592C, #E49632, #E8B542, #EFCF54, #F1DE5D, #F9EC69, #EFEF6B,#BED851,#9EC536,#76B85E,#55B4A0, #40A6BF, #388EC1, #3768A3, #384089, #402B7A, #582D7C, #75317E, #9D3B84, #D75B8D);
+  background-size: 1;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  
+.fadeaway {
+/*  background: linear-gradient(90deg, #000000, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+  background: linear-gradient(90deg, #000000 , transparent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*text-shadow: 0rem 0rem 0.75rem blue;*/
+  }
+
+/* Images */
+img { display: block; margin: 1rem auto 1rem auto; }
+
+.signature { margin-right: 0; }
+
+/* ordered lists */
+ol {list-style-type: upper-roman;}
+ol ol {list-style-type: decimal;}
+ol ol ol {list-style-type: none;}
+
+/*UNNECESSARY CRAP*/
+
+/*h1, h2, h3 {
+  background: repeating-linear-gradient(90deg, #D75B8D, #CF2D28, #DE592C, #E49632, #E8B542, #EFCF54, #F1DE5D, #F9EC69, #EFEF6B,#BED851,#9EC536,#76B85E,#55B4A0, #40A6BF, #388EC1, #3768A3, #384089, #402B7A, #582D7C, #75317E, #9D3B84, #D75B8D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 50%;
+  }
+  
+h1, h2, h3 {
+  background-image: url(../Bilder/Rainbow.jpg);
+  background-size: 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #000000;
+  text-align: center;
+  }*/
+
+/* Styles */
+.signatur { margin: 1.4rem 0rem 0rem 0rem; text-indent: 1.42rem; text-align: right; }
