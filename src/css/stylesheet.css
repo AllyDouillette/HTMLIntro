@@ -1,6 +1,10 @@
 /* Created for .epub-conversion within Scrivener 3.0 by Alexandria Douillette, June 2022 when working on The last five years of David S. Levi */
 
 /* Default page formatting */
+* {
+  color:  rgb(227, 225, 223);
+  background-color:rgb(48, 45, 45);
+}
 
 body {
   font-family: serif;
@@ -11,7 +15,22 @@ body {
   }
 
 /*Options to fill differently*/
-  
+
+.block {
+  background-color: rgb(119, 39, 107);
+  height: 200px;
+}
+
+div.block div {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+span {
+  color: pink
+}
+
 /*Different pagestyles*/
 
 .titlepage, .dedication, .bookheader, .partheader, .sourceindex {
@@ -178,11 +197,12 @@ strong, b, .bold, .strong {
   text-align: justify;
   }
 
-.rainbow {
+h1, h2, h3, h4, h5, h6, h7, h8, h9, .rainbow {
   background: repeating-linear-gradient(90deg, #D75B8D, #CF2D28, #DE592C, #E49632, #E8B542, #EFCF54, #F1DE5D, #F9EC69, #EFEF6B,#BED851,#9EC536,#76B85E,#55B4A0, #40A6BF, #388EC1, #3768A3, #384089, #402B7A, #582D7C, #75317E, #9D3B84, #D75B8D);
   background-size: 1;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0rem 0rem 0.05rem rgba(255, 255, 255, 0.441);
   }
   
 .fadeaway {
